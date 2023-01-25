@@ -1,0 +1,176 @@
+/* 头部引入 */
+
+/* <!--Alist V3建议添加的，已经默认添加了，如果你的没有建议加上-->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
+
+<!--引入字体，全局字体使用-->
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+
+<!--评论系统使用的js-->
+<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+
+<!--不蒜子计数器-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+*/
+
+
+/* alist_header.css */
+
+<style>
+
+/*渐变背景CSS*/
+#web_bg {
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: -o-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: -ms-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+}
+
+/*主列表夜间模式透明，50%这数值是控制透明度大小的*/
+.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css{
+background-color:rgb(0 0 0 / 60%) !important;
+}
+
+/*readme夜间模式透明，50%这数值是控制透明度大小的*/
+.hope-c-PJLV.hope-c-PJLV-iiuDLME-css{
+background-color:rgb(0 0 0 / 60%) !important;
+}
+
+/*主列表透明*/
+.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/*readme透明*/
+.hope-c-PJLV.hope-c-PJLV-ikSuVsl-css{
+background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/*顶部右上角切换按钮透明*/
+.hope-c-ivMHWx-hZistB-cv.hope-icon-button{
+background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/*右下角侧边栏按钮透明*/
+.hope-c-PJLV-ijgzmFG-css{
+background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/*白天模式代码块透明*/
+.hope-ui-light pre{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/*夜间模式代码块透明*/
+.hope-ui-dark pre {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/*以下为评论系统专用*/
+/*评论区 - 适配大小契合度*/
+.newValine{
+ width: min(96%, 940px);
+ flex-direction: column;
+ row-gap: var(--hope-space-2);
+ border-radius: var(--hope-radii-xl);
+ padding: var(--hope-space-2);
+ box-shadow: var(--hope-shadows-lg);
+}
+/*评论区 - 白天模式透明度*/
+.hope-ui-light .newValine{
+background-color: rgba(255, 255, 255, 0.6) !important;
+}
+/*评论区 - 夜间模式透明度*/
+.hope-ui-dark .newValine{
+background-color:rgb(0 0 0 / 60%) !important;
+}
+/*评论区 - 输入栏里面跳舞的小人背景图*/
+.vedit{
+    background-image:url(https://img.yanhua.cc/themes/comments.gif); 
+    background-repeat:no-repeat;
+    background-position:right;
+    transition:all 0.25s ease-in-out 0s;
+    }
+    textarea#comment-textarea:focus{
+    background-position-y:120px;
+    transition:all 0.25s ease-in-out 0s;
+}	
+
+/*隐藏管理字眼*/
+.footer span,.footer a:nth-of-type(2){
+  display:none;
+}
+
+/*去掉底部*/
+.footer {
+    display: none !important;
+}
+
+/*底部CSS，.App .table这三个一起的*/
+dibu {
+    border-top: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.App {
+    min-height: 85vh;
+}
+.table {
+    margin: auto;
+}
+
+</style>
